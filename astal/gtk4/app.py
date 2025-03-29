@@ -2,7 +2,9 @@ import sys
 
 from typing import Callable, Optional, Any, Dict
 
-from gi.repository import Astal, AstalIO, Gio
+from gi.repository import Astal, AstalIO, Gio, Gtk, Gtk4LayerShell
+
+Gtk.init()
 
 class AstalPy(Astal.Application):
     request_handler: Optional[Callable[[str, Callable[[Any], None]], None]] = None

@@ -2,13 +2,11 @@
 name = "astal"
 version = "0.1.0"
 description = ""
-authors = []
+authors = [{ name = "natalie roentgen connolly", email = "natalie@natalieee.net" }]
 
 [tool.poetry.dependencies]
 python = ">=3.12,<3.13"
-gengir = "^1.0.2"
-pygobject = "^3.50.0"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

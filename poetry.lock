@@ -161,6 +161,79 @@ htmlsoup = ["BeautifulSoup4"]
 source = ["Cython (==0.29.37)"]
 
 [[package]]
+name = "meson"
+version = "1.7.0"
+description = "A high performance build system"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "meson-1.7.0-py3-none-any.whl", hash = "sha256:ae3f12953045f3c7c60e27f2af1ad862f14dee125b4ed9bcb8a842a5080dbf85"},
+    {file = "meson-1.7.0.tar.gz", hash = "sha256:08efbe84803eed07f863b05092d653a9d348f7038761d900412fddf56deb0284"},
+]
+
+[package.extras]
+ninja = ["ninja (>=1.8.2)"]
+progress = ["tqdm"]
+typing = ["mypy", "typing_extensions"]
+
+[[package]]
+name = "meson-python"
+version = "0.17.1"
+description = "Meson Python build backend (PEP 517)"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "meson_python-0.17.1-py3-none-any.whl", hash = "sha256:30a75c52578ef14aff8392677b09c39346e0a24d2b2c6204b8ed30583c11269c"},
+    {file = "meson_python-0.17.1.tar.gz", hash = "sha256:efb91f69f2e19eef7bc9a471ed2a4e730088cc6b39eacaf3e49fc4f930eb5f83"},
+]
+
+[package.dependencies]
+meson = {version = ">=1.2.3", markers = "python_version >= \"3.12\""}
+packaging = ">=19.0"
+pyproject-metadata = ">=0.7.1"
+
+[package.extras]
+docs = ["furo (>=2023.5.20)", "sphinx (>=6.2,<7.0)", "sphinx-copybutton (>=0.5.0)", "sphinx-design (>=0.1.0)", "sphinxext-opengraph (>=0.7.0)"]
+test = ["build", "cython (>=3.0.3)", "packaging (>=23.1)", "pytest (>=6.0)", "pytest-cov[toml]", "pytest-mock", "typing-extensions (>=3.7.4)", "wheel"]
+
+[[package]]
+name = "ninja"
+version = "1.11.1.4"
+description = "Ninja is a small build system with a focus on speed"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "ninja-1.11.1.4-py3-none-macosx_10_9_universal2.whl", hash = "sha256:b33923c8da88e8da20b6053e38deb433f53656441614207e01d283ad02c5e8e7"},
+    {file = "ninja-1.11.1.4-py3-none-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:cede0af00b58e27b31f2482ba83292a8e9171cdb9acc2c867a3b6e40b3353e43"},
+    {file = "ninja-1.11.1.4-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:096487995473320de7f65d622c3f1d16c3ad174797602218ca8c967f51ec38a0"},
+    {file = "ninja-1.11.1.4-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d3090d4488fadf6047d0d7a1db0c9643a8d391f0d94729554dbb89b5bdc769d7"},
+    {file = "ninja-1.11.1.4-py3-none-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:ecce44a00325a93631792974659cf253a815cc6da4ec96f89742925dfc295a0d"},
+    {file = "ninja-1.11.1.4-py3-none-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:9c29bb66d2aa46a2409ab369ea804c730faec7652e8c22c1e428cc09216543e5"},
+    {file = "ninja-1.11.1.4-py3-none-manylinux_2_28_armv7l.manylinux_2_31_armv7l.whl", hash = "sha256:055f386fb550c2c9d6157e45e20a84d29c47968876b9c5794ae2aec46f952306"},
+    {file = "ninja-1.11.1.4-py3-none-musllinux_1_1_aarch64.whl", hash = "sha256:f6186d7607bb090c3be1e10c8a56b690be238f953616626f5032238c66e56867"},
+    {file = "ninja-1.11.1.4-py3-none-musllinux_1_1_i686.whl", hash = "sha256:cf4453679d15babc04ba023d68d091bb613091b67101c88f85d2171c6621c6eb"},
+    {file = "ninja-1.11.1.4-py3-none-musllinux_1_1_ppc64le.whl", hash = "sha256:d4a6f159b08b0ac4aca5ee1572e3e402f969139e71d85d37c0e2872129098749"},
+    {file = "ninja-1.11.1.4-py3-none-musllinux_1_1_s390x.whl", hash = "sha256:c3b96bd875f3ef1db782470e9e41d7508905a0986571f219d20ffed238befa15"},
+    {file = "ninja-1.11.1.4-py3-none-musllinux_1_1_x86_64.whl", hash = "sha256:cf554e73f72c04deb04d0cf51f5fdb1903d9c9ca3d2344249c8ce3bd616ebc02"},
+    {file = "ninja-1.11.1.4-py3-none-musllinux_1_2_armv7l.whl", hash = "sha256:cfdd09776436a1ff3c4a2558d3fc50a689fb9d7f1bdbc3e6f7b8c2991341ddb3"},
+    {file = "ninja-1.11.1.4-py3-none-win32.whl", hash = "sha256:2ab67a41c90bea5ec4b795bab084bc0b3b3bb69d3cd21ca0294fc0fc15a111eb"},
+    {file = "ninja-1.11.1.4-py3-none-win_amd64.whl", hash = "sha256:4617b3c12ff64b611a7d93fd9e378275512bb36eff8babff7c83f5116b4f8d66"},
+    {file = "ninja-1.11.1.4-py3-none-win_arm64.whl", hash = "sha256:5713cf50c5be50084a8693308a63ecf9e55c3132a78a41ab1363a28b6caaaee1"},
+    {file = "ninja-1.11.1.4.tar.gz", hash = "sha256:6aa39f6e894e0452e5b297327db00019383ae55d5d9c57c73b04f13bf79d438a"},
+]
+
+[[package]]
+name = "packaging"
+version = "24.2"
+description = "Core utilities for Python packages"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "packaging-24.2-py3-none-any.whl", hash = "sha256:09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694fe6150451a759"},
+    {file = "packaging-24.2.tar.gz", hash = "sha256:c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"},
+]
+
+[[package]]
 name = "pycairo"
 version = "1.27.0"
 description = "Python interface for cairo"
@@ -194,6 +267,24 @@ files = [
 pycairo = ">=1.16"
 
 [[package]]
+name = "pyproject-metadata"
+version = "0.9.1"
+description = "PEP 621 metadata parsing"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "pyproject_metadata-0.9.1-py3-none-any.whl", hash = "sha256:ee5efde548c3ed9b75a354fc319d5afd25e9585fa918a34f62f904cc731973ad"},
+    {file = "pyproject_metadata-0.9.1.tar.gz", hash = "sha256:b8b2253dd1b7062b78cf949a115f02ba7fa4114aabe63fa10528e9e1a954a816"},
+]
+
+[package.dependencies]
+packaging = ">=19.0"
+
+[package.extras]
+docs = ["furo (>=2023.9.10)", "myst-parser", "sphinx (>=7.0)", "sphinx-autodoc-typehints", "sphinx-autodoc-typehints (>=1.10.0)"]
+test = ["exceptiongroup", "pytest (>=6.2.4)", "pytest-cov[toml] (>=2)", "tomli (>=1.0.0)"]
+
+[[package]]
 name = "typer"
 version = "0.4.2"
 description = "Typer, build great CLIs. Easy to code. Based on Python type hints."
@@ -216,4 +307,4 @@ test = ["black (>=22.3.0,<23.0.0)", "coverage (>=5.2,<6.0)", "isort (>=5.0.6,<6.
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.12,<3.13"
-content-hash = "5560dd2e107dbaa137e80fae3c45ca93d32ba47fece6efee9baf519adcd6be47"
+content-hash = "6bb927db1f5cab7b991f033aba8a10568e67ca5b4ae6790975cf04c926575e08"
