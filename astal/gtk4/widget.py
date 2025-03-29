@@ -6,6 +6,9 @@ from gi.repository import Astal, Gtk
 def filter_children(children):
     return map(lambda x: x if isinstance(x, Gtk.Widget) else Gtk.Label(visible=True, label=x), children)
 
+Box = astalify(Astal.Box)
+Button = astalify(Gtk.Button)
+
 def _centerbox_get_children(self):
     return self.start_widget, self.center_widget, self.end_widget
 
@@ -15,11 +18,14 @@ def _centerbox_set_children(self, children):
     self.center_widget = children[1] or Gtk.Box()
     self.end_widget = children[2] or Gtk.Box()
 
-Box = astalify(Astal.Box)
-Button = astalify(Gtk.Button)
 CenterBox = astalify(Gtk.CenterBox, dict(
     get_children = _centerbox_get_children,
     set_children = _centerbox_set_children
+))
+
+CircularProgress = astalify(Astal.CircularProgressBar, dict(
+    get_children = lambda self: [getattr(self, 'child', None)],
+    set_children = lambda self, children: setattr(self, 'child', children[0])
 ))
 # CircularProgress = astalify(Gtk.CircularProgress)
 # DrawingArea = astalify(Gtk.DrawingArea)
