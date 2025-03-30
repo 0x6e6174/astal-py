@@ -2,7 +2,7 @@ import sys
 
 from typing import Callable, Optional, Any, Dict
 
-from gi.repository import Astal, AstalIO, Gio, Gtk, Gtk4LayerShell
+from gi.repository import Astal, AstalIO, Gio, Gtk
 
 Gtk.init()
 
